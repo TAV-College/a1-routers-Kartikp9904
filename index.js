@@ -15,11 +15,7 @@ app.set("view engine", "ejs");
 
 // Load routers
 app.use("", mainRouter);
-app.use("", bookRouter);
-
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
-});
+app.use("/books", bookRouter);
 
 // Run app
 app.listen(port, () => {
